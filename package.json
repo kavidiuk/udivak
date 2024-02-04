@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:udivak": "node dist/udivak/server/server.mjs"
+    "serve:ssr:udivak": "node dist/udivak/server/server.mjs",
+    "fullstack": "npm run frontend && npm run backend"
   },
   "private": true,
   "dependencies": {
