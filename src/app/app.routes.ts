@@ -1,11 +1,13 @@
 import { RouterModule, Routes } from '@angular/router';
 import { Component, NgModule } from '@angular/core';
-import { ImpostazioniprofiloComponent } from './profiloUtente/impostazioniprofilo/impostazioniprofilo.component';
-import { ProfiloComponent } from './profiloUtente/profilo/profilo.component';
+import { ImpostazioniprofiloComponent } from './navbar/profiloUtente/impostazioniprofilo/impostazioniprofilo.component';
+import { ProfiloComponent } from './navbar/profiloUtente/profilo/profilo.component';
 import { LoginComponent } from './registrazione/login/login.component';
 import { RegistrazioneComponent } from './registrazione/registrazione/registrazione.component';
-import { HomeComponent } from './profiloUtente/home/home.component';
-import { CercaComponent } from './cerca/cerca.component';
+import { HomeComponent } from './navbar/homeUtente/home/home.component';
+import { CercaComponent } from './navbar/cerca/cerca.component';
+import { MessaggiDirettiComponent } from './navbar/homeUtente/messaggi-diretti/messaggi-diretti.component';
+import { CaricaFotoComponent } from './navbar/carica-foto/carica-foto.component';
 export const routes: Routes = [
     {
         path: '',
@@ -24,13 +26,21 @@ export const routes: Routes = [
         component: ImpostazioniprofiloComponent
     },
     {
+        path:'cerca',
+        component: CercaComponent
+    },
+    {
         path:'home',
         component: HomeComponent
     },
     {
-        path:'cerca',
-        component: CercaComponent
+        path:'messaggiDiretti',
+        component: MessaggiDirettiComponent
     },
+    {
+        path:'caricaFoto',
+        component: CaricaFotoComponent
+    }
 ];
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
