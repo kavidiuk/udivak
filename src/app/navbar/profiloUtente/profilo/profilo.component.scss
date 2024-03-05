@@ -1,0 +1,92 @@
+
+
+#fotoSettings{
+    border-radius: 99%;
+    height: 75%;
+}
+#editProfileButton{
+    background-color: #d8363a;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+}
+.allineamenti{
+    .col-4{
+       //padding: 1px;
+      // margin-top: 0;
+    }
+    img{
+        width: 80%;
+        height: 9rem;
+        margin-top: 0;
+        padding: 0;
+
+    }
+}
+@media screen and (min-width: 541px) and (max-width: 9999px) {
+    #editProfileButton{
+        background-color: black;
+        margin-top: -3rem;
+        margin-bottom: 1rem;
+}
+.edit-fluent{
+    margin-left: 1rem;
+}
+#fotoSettings{
+    width: 8rem;
+    height: 8rem;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+}
+}
+@media screen and (min-width: 660px) and (max-width: 9999px) {
+    #editProfileButton{
+        background-color: yellow;
+        margin-top: -4rem;
+        margin-bottom: 1rem;
+}
+#fotoSettings{
+width: 10rem;
+height: 10rem;
+margin-bottom: 5rem;
+margin-left: 2rem;
+}
+.edit-fluent{
+    margin-left: 3rem;
+}
+}
+@media screen and (min-width: 800px) and (max-width: 9999px) {
+    #editProfileButton{
+        background-color: blueviolet;
+        margin-top: -6rem;
+        margin-bottom: 1rem;
+}
+.edit-fluent{
+    margin: 2rem;
+}
+#fotoSettings{
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 5rem;
+    margin-left: 2rem;
+}
+
+}
+@media screen and (min-width: 1010px) and (max-width: 9999px) {
+    #editProfileButton{
+        background-color: blue;
+        // margin-top: -7rem;
+        // margin-bottom: 1rem;
+}
+.edit-fluent{
+    // margin: 2rem;
+    // margin-left: 6rem;
+    // font-size: 1.3rem;
+}
+#fotoSettings{
+    // width: 10rem;
+    // height: 10rem;
+    // margin-bottom: 5rem;
+    // margin-left: 6rem;
+}
+}
+hr{margin: auto;}
