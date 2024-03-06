@@ -1,9 +1,0 @@
-{
-    "extends": "../../tsconfig.json", // Assicurati che il percorso sia corretto
-    "angularCompilerOptions": {
-      "enableIvy": true,
-      "fullTemplateTypeCheck": true,
-      "strictInjectionParameters": true
-    }
-  }
-  
