@@ -9,10 +9,10 @@ export class ApiTest {
   
   constructor(private httpClient: HttpClient) { }
   
-  private apiUrl = 'http://dummyjson.com';
+  private apiUrl = 'http://localhost:8080';
 
   salvaDati(dati:any):Observable<any>{
-    return this.httpClient.post<any>(this.apiUrl + '/api/clients', dati);
+    return this.httpClient.post<any>(this.apiUrl + '/register', dati);
   }
   
   getSomeData(): Observable<any> {

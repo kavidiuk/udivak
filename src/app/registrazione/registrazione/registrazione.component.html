@@ -16,25 +16,32 @@
                 <form>
                   <p>Metti il tuo nome</p>
                   <div class="form-outline mb-4">
-                    <input type="text" id="name" class="form-control"
+                    <input [(ngModel)]="nome" name="nome" type="text" id="name" class="form-control"
                       placeholder="Nome" />
                   </div>
                   
                   <p>Metti il tuo cognome</p>
                   <div class="form-outline mb-4">
-                    <input type="text" id="form2Example11" class="form-control"
+                    <input [(ngModel)]="cognome" name="cognome" type="text" id="form2Example11" class="form-control"
                       placeholder="Cognome" />
+                  </div>
+
+                  <p>Metti il tuo username</p>
+                  <div class="form-outline mb-4">
+                    <input  [(ngModel)]="username" name="username" type="text" id="username" class="form-control"
+                      placeholder="Username" />
                   </div>
 
                   <p>La tua E-mail</p>
                   <div class="form-outline mb-4">
-                    <input type="email" id="form2Example11" class="form-control"
+                    <input  [(ngModel)]="email" name="email" type="email" id="form2Example11" class="form-control"
                       placeholder="E-mail" />
                   </div>
 
                   <p>La tua password</p>
                   <div class="form-outline mb-4">
-                    <input type="password" id="form2Example22" class="form-control" />
+                    <input  [(ngModel)]="password" name="password" type="password"
+                     id="form2Example22" class="form-control" />
                   </div>
 
                   <div class="text-center pt-1 mb-5 pb-1">
