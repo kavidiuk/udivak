@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { response } from 'express';//questo
-import { ApiTest } from '../../apiTest';// *
+import { ApiTest } from '../../apiTest';// * 
 @Component({
   selector: 'app-registrazione',
   standalone: true,
