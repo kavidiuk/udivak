@@ -9,81 +9,85 @@
     <!-- sezione di Scrittura -->
 </div>
 <div class="float input-group mb-3 z-1">
-    <input type="text" class="form-control" placeholder="Scrivi ..." aria-label="Recipient's username" aria-describedby="button-addon2">
-    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+    <input id="testo" type="text" class="form-control" placeholder="Scrivi ..." aria-label="Recipient's username" aria-describedby="button-addon2">
+    <!-- <button (submit)="addPost($event)" class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button> -->
+    <button (click)="addPost($event)" class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
   </div>
   <!-- messaggi -->
   <div class="overflow-y-scroll w-100 mb-6">
       <!-- primo messaggio -->
-      <div class="float-end m-2 border border-black border-3 rounded-start-5 p-2 bg-success">
-          <h3>busdam eveniet soluta, placeat aut nesciunt! Saepe fuga </h3>
+      <div class="float-end m-2 border border-black border-3 rounded-start-5 p-2 bg-success col-7">
+          <h3> Ciao amico. Ti sto messaggiando dal mio numero dopo che perso l'altro </h3>
         </div>
         <!-- secondo messaggio -->
-        <div class="float-end m-2 border border-black border-3 rounded-start-5 p-2 bg-success">
-            <h3>busdam eveniet soluta, placeat aut nesciunt! Saepe fuga </h3>
+        <div class="float-end m-2 border border-black border-3 rounded-start-5 p-2 bg-success col-7">
+            <h3> Comunque come stai? E da un bel po che non ci sentiamo </h3>
         </div>
         <!-- messaggio ricevuto -->
-        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger">
-            <h3>busdam eveniet soluta, placeat aut nesciunt! Saepe fuga </h3>
+        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger col-7">
+            <h3> Ciao Amico mio. Bene dai te ne passato un po di tempo 😂 </h3>
         </div>
         <!-- messaggio ricevuto -->
-        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger">
-            <h3>busdam eveniet soluta, placeat aut nesciunt! Saepe fuga </h3>
+        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger col-7">
+            <h3> Eh si 😂, però pure io sto bene grazie. Che fai di bello ? </h3>
         </div>
         <!-- messaggio inviato -->
-        <div class="float-end m-2 border border-black border-3 rounded-start-5 p-2 bg-success">
-            <h3>busdam eveniet soluta, placeat aut nesciunt! Saepe fuga </h3>
+        <div class="float-end m-2 border border-black border-3 rounded-start-5 p-2 bg-success col-7">
+            <h3> Niente di che, sono a casa guardare la TV, te ? </h3>
         </div>
         <!-- messaggio ricevuto -->
-        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger">
-            <h3>busdam eveniet soluta, placeat aut nesciunt! Saepe fuga </h3>
+        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger col-7">
+            <h3> Sono fuori al bar, sto mangiando dei brioche con i miei amici 😎 </h3>
         </div>
         <!-- messaggio ricevuto -->
-        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger">
-            <h3>busdam eveniet soluta, placeat aut nesciunt! Saepe fuga </h3>
+        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger col-7">
+            <h3> Ah figo, io invece sono rimasto a casa tutto il giorno perché pensavo piovesse 😂 </h3>
         </div>
         <!-- messaggio inviato -->
-        <div class="float-end m-2 border border-black border-3 rounded-start-5 p-2 bg-success">
-            <h3>busdam eveniet soluta, placeat aut nesciunt! Saepe fuga </h3>
+        <div class="float-end m-2 border border-black border-3 rounded-start-5 p-2 bg-success col-7">
+            <h3> 😂 🤣 Beh da quello che avevano detto al meteo, però c'è il sole, e adesso sembra ottimo per uscire a prendere in po d'aria fresca </h3>
         </div>
         <!-- messaggio ricevuto -->
-        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger">
-            <h3>busdam eveniet soluta, placeat aut nesciunt! Saepe fuga </h3>
+        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger col-7">
+            <h3> Magari la prossima volta mi unisco, anche perché è da tempo che nn ci vediamo 😁 </h3>
         </div>
         <!-- messaggio ricevuto -->
-        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger">
-            <h3>busdam eveniet soluta, placeat aut nesciunt! Saepe fuga </h3>
+        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger col-7">
+            <h3> Si dai ci sta, in uno di questi giorni 😉 </h3>
         </div>
         <!-- messaggio inviato -->
-        <div class="float-end m-2 border border-black border-3 rounded-start-5 p-2 bg-success">
-            <h3>busdam eveniet soluta, placeat aut nesciunt! Saepe fuga </h3>
+        <div class="float-end m-2 border border-black border-3 rounded-start-5 p-2 bg-success col-7">
+            <h3> Domani si torna al lavoro purtroppo 😴 😞 </h3>
         </div>
         <!-- messaggio ricevuto -->
-        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger">
-            <h3>busdam eveniet soluta, placeat aut nesciunt! Saepe fuga </h3>
+        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger col-7">
+            <h3> Per te, io ho un altro giorno libero 🤪 😜 , probabile che vada pure alla fiera di Toran </h3>
         </div>
         <!-- messaggio ricevuto -->
-        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger">
-            <h3>busdam eveniet soluta, placeat aut nesciunt! Saepe fuga </h3>
+        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger col-7">
+            <h3> Se rimani fino a sera casomai vengo dopo finito lavoro </h3>
         </div>
         <!-- messaggio inviato -->
-        <div class="float-end m-2 border border-black border-3 rounded-start-5 p-2 bg-success">
-            <h3>busdam eveniet soluta, placeat aut nesciunt! Saepe fuga </h3>
+        <div class="float-end m-2 border border-black border-3 rounded-start-5 p-2 bg-success col-7">
+            <h3> Si dai, molto volentieri </h3>
         </div>
         <!-- messaggio ricevuto -->
-        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger">
-            <h3>busdam eveniet soluta, placeat aut nesciunt! Saepe fuga </h3>
+        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger col-7">
+            <h3> Fammi sapere a che ora verrai </h3>
         </div>
         <!-- messaggio ricevuto -->
-        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger">
-            <h3>busdam eveniet soluta, placeat aut nesciunt! Saepe fuga </h3>
+        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger col-7">
+            <h3> Ok 👍🏻 Magari faccio una doccia veloce poi vengo, si vedrà 😅 </h3>
         </div>
         <!-- messaggio inviato -->
-        <div class="float-end m-2 border border-black border-3 rounded-start-5 p-2 bg-success">
-            <h3>busdam eveniet soluta, placeat aut nesciunt! Saepe fuga </h3>
+        <div class="float-end m-2 border border-black border-3 rounded-start-5 p-2 bg-success col-7">
+            <h3> Nessun problema 🥰, ti lascio vivere la giornata </h3>
         </div>
         <!-- messaggio ricevuto -->
-        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger">
-            <h3>busdam eveniet soluta, placeat aut nesciunt! Saepe fuga </h3>
+        <div class="float-start m-2 border border-black border-3 rounded-end-5 p-2 bg-danger col-7">
+            <h3> Grazie pure te goditela 👍🏻 👍🏻 </h3>
+        </div>
+        <div id="postContainer" class="overflow-y-scroll w-100 mb-6">
+            <!-- Qui vengono aggiunti i post -->
         </div>
     </div>
