@@ -9,7 +9,7 @@ import { HomeComponent } from './navbar/homeUtente/home/home.component';
 import { CercaComponent } from './navbar/cerca/cerca.component';
 import { MessaggiDirettiComponent } from './navbar/homeUtente/messaggi-diretti/messaggi-diretti.component';
 import { CaricaFotoComponent } from './navbar/carica-foto/carica-foto.component';
-
+ 
 export const routes: Routes = [
     {
         path: '',

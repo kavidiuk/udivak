@@ -1,10 +1,11 @@
 import { Component, OnInit, Renderer2, ElementRef } from '@angular/core';
 import { RouterModule } from '@angular/router';
 @Component({
+  standalone: true,
+  imports: [RouterModule],
   selector: 'app-profilo',
   templateUrl: './profilo.component.html',
-  styleUrls: ['./profilo.component.scss']
-  
+  styleUrls: ['./profilo.component.scss'],
 })
 export class ProfiloComponent implements OnInit {
 

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-
+import { RouterModule } from '@angular/router';
 @Component({
+  standalone: true,
+  imports: [RouterModule],
   selector: 'app-carica-foto',
   templateUrl: './carica-foto.component.html',
   styleUrls: ['./carica-foto.component.scss']
