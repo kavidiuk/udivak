@@ -34,8 +34,11 @@ export class HomeComponent implements OnInit{
       this.renderer.addClass(postElement, 'mt-3');
       this.renderer.addClass(postElement, 'm-auto');
       this.renderer.addClass(postElement, 'col-auto');
+      this.renderer.addClass(postElement, 'altezza');
 
       const randomImageUrl = this.getRandomImageUrl();
+      const randomName = this.getRandomSurname();
+      const RandomText = this.getRandomText();
       postElement.innerHTML = `
       <div class="d-flex">
       <img id="fotoProfilomini" class="mx-2" src="${randomImageUrl}" style='width: 2rem;
@@ -43,7 +46,7 @@ export class HomeComponent implements OnInit{
       border-radius: 50%;
       margin-right: 1rem;
       margin-top: 0.5rem;' alt="fotoProfilo">
-      <h2 class="mb-0 mt-2">Nome Utente</h2>
+      <h2 class="mb-0 mt-2">${randomName}</h2>
     </div>
     <hr class="mt-1 mb-0">
     <img src="${randomImageUrl}" class="card-img-top" alt="...">
@@ -51,7 +54,7 @@ export class HomeComponent implements OnInit{
       <i class="far fa-heart mx-2"></i>
       <i class="far fa-comment mx-2"></i>
       <i class="far fa-share-square mx-2"></i>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <p class="card-text">${RandomText}</p>
     </div>
       `;
       postContainer.appendChild(postElement);
@@ -65,13 +68,13 @@ export class HomeComponent implements OnInit{
   }
   
   getRandomText(): String {
-    const text = ['ciao a tutti seguitemi nel mio profilo', 'hello followers', 'hola chicos', 'Seguitemi per ulteriori informazioni']
+    const text = ['Sei una fonte continua di ispirazione. Continua così! 💪','Che bellissimi ricordi! Grazie per averli condivisi con noi! 🌈','Questa immagine mi ha emozionato. Grazie per condividerla! ❤️','Mi hai fatto venire voglia di viaggiare! Dove è questo paradiso? ✈️','Semplicemente stupendo! Non smettere mai di condividere la tua arte! 📸','Quanta creatività in questa foto! Mi ispira tantissimo! 🎨','Adoro il tuo stile! Sempre alla moda! 💃', 'Non riesco a credere quanto sia bello questo posto! 🌟', 'Wow, questa foto è davvero mozzafiato! 😍', 'Wow, questa foto è davvero mozzafiato! 😍']
     const randomText = text[Math.floor(Math.random()*text.length)];
     return `${randomText}`;
   }
   
   getRandomSurname(): String {
-    const text = ['Calciatore', 'Cantante', 'informatico', 'Barista']
+    const text = ['Francesco', 'Denis', 'Samy', 'Andrea','Clenildo','Artur','Ilias','Harshpreet','Cristian','Moumine']
     const randomText = text[Math.floor(Math.random()*text.length)];
     return `${randomText}`;
   }
