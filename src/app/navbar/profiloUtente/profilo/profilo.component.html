@@ -33,29 +33,25 @@
     </div>
     <div class="col-9 m-0 p-0 text-center">
       <h2>Nome e cognome</h2>
-<!-- 
-  (submit)="addPost($event)"
- -->
       <!-- numeri -->
       <form>
         <fieldset>
           <div class="d-flex">
             <div class="col-4">
               <strong>followers</strong>
-              <h3>{{ generateRandomNumber(1,9999) }}</h3>
+              <h3>{{ generateRandomNumber(1,15) }}</h3>
             </div>
             <div class="col-4">
-              <strong>followers</strong>
-              <h3>{{ generateRandomNumber(1,9999) }}</h3>
+              <strong>seguiti</strong>
+              <h3>{{ generateRandomNumber(1,15) }}</h3>
             </div>
             <div class="col-4">
-              <strong>followers</strong>
-              <h3>{{ generateRandomNumber(1,9999) }}</h3>
+              <strong>like</strong>
+              <h3>{{ generateRandomNumber(1,15) }}</h3>
             </div>
           </div>
         </fieldset>
       </form>
-
 
       <!-- <button id="editProfileButton" type="submit" class="rounded-pill" routerLink="/impostazioniProfilo">Edita il tuo profilo</button> -->
     </div>
@@ -63,55 +59,10 @@
   <!-- bio -->
   <div class="m-2 edit-fluent">  
       <button id="editProfileButton" type="submit" class="rounded-pill d-block" routerLink="/impostazioniProfilo">Edita il tuo profilo</button>
-      <strong>surname</strong>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <strong>{{getRandomSurname()}}</strong>
+      <p>{{getRandomText()}}</p>
     </div>
   <hr>
-
-<!-- Post -->
-<!-- <div class="container">
-<div class="row align-items-start">
-  <div class="col img">
-    <img src="https://images.unsplash.com/photo-1708806016675-dac47ebc8459?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8" alt="">
-  </div>
-  <div class="col img">
-    <img src="https://images.unsplash.com/photo-1708806016675-dac47ebc8459?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8" alt="">
-  </div>
-  <div class="col img">
-    <img src="https://images.unsplash.com/photo-1708806016675-dac47ebc8459?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8" alt="">
-  </div>
-</div>
-</div> -->
-
 <div class="container">
-  <div class="row align-items-start">
-    <div class="col-4 col-sm-3 col-md-2 p-1">
-      <img src="https://images.unsplash.com/photo-1708806016675-dac47ebc8459?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8" width="100%" alt="">
-    </div>
-    <div class="col-4 col-sm-3 col-md-2 p-1">
-      <img src="https://images.unsplash.com/photo-1708806016675-dac47ebc8459?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8" width="100%" alt="">
-    </div>
-    <div class="col-4 col-sm-3 col-md-2 p-1">
-      <img src="https://images.unsplash.com/photo-1708806016675-dac47ebc8459?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8" width="100%" alt="">
-    </div>
-    <div class="col-4 col-sm-3 col-md-2 p-1">
-      <img src="https://images.unsplash.com/photo-1708806016675-dac47ebc8459?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8" width="100%" alt="">
-    </div>
-    <div class="col-4 col-sm-3 col-md-2 p-1">
-      <img src="https://images.unsplash.com/photo-1708806016675-dac47ebc8459?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8" width="100%" alt="">
-    </div>
-    <div class="col-4 col-sm-3 col-md-2 p-1">
-      <img src="https://images.unsplash.com/photo-1708806016675-dac47ebc8459?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8" width="100%" alt="">
-    </div>
-    <div class="col-4 col-sm-3 col-md-2 p-1">
-      <img src="https://images.unsplash.com/photo-1708806016675-dac47ebc8459?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8" width="100%" alt="">
-    </div>
-    <div class="col-4 col-sm-3 col-md-2 p-1">
-      <img src="https://images.unsplash.com/photo-1708806016675-dac47ebc8459?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8" width="100%" alt="">
-    </div>
-    <div class="col-4 col-sm-3 col-md-2 p-1">
-      <img src="https://images.unsplash.com/photo-1708806016675-dac47ebc8459?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8" width="100%" alt="">
-    </div>
-    
-  </div>
+  <div id="postContainer" class="row align-items-start">
 </div>
