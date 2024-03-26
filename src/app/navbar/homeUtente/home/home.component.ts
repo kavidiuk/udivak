@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2, ElementRef } from '@angular/core';
+import { Component, OnInit, Renderer2, ElementRef, AfterViewInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -8,11 +8,14 @@ import { RouterModule } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit, AfterViewInit{
   constructor(private renderer: Renderer2, private el: ElementRef) { }
 
   ngOnInit(): void {
     this.addRandomPosts();
+  }
+  ngAfterViewInit(): void {
+    this.addRandomDirect();
   }
 
   generateRandomNumber(min: number, max: number): number {
@@ -77,5 +80,31 @@ export class HomeComponent implements OnInit{
     const text = ['Francesco', 'Denis', 'Samy', 'Andrea','Clenildo','Artur','Ilias','Harshpreet','Cristian','Moumine']
     const randomText = text[Math.floor(Math.random()*text.length)];
     return `${randomText}`;
+  }
+
+  addRandomDirect(): void {
+
+    const postContainer = this.el.nativeElement.querySelector('#randDirect');
+    if (!postContainer) return;
+
+    const numberOfPosts = this.generateRandomNumber(3, 10);
+
+    for (let i = 0; i < numberOfPosts; i++) {
+
+      const postElement = this.renderer.createElement('div');
+      postElement.innerHTML = `
+      <a routerLink="/messaggiDiretti">
+      <div class="d-flex">
+        <li><img style="width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+        margin-top: 0.5rem;" src="https://images.unsplash.com/photo-1706818033281-99b8289e0354?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></li>
+        <h4 class="mt-2">Nome Utente</h4>
+      </div>
+    </a>
+      `
+      postContainer.appendChild(postElement);
+    }
   }
 }
