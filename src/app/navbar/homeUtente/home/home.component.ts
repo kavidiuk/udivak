@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit, AfterViewInit{
     const postContainer = this.el.nativeElement.querySelector('#postContainer');
     if (!postContainer) return;
 
-    const numberOfPosts = this.generateRandomNumber(3, 10);
+    const numberOfPosts = this.generateRandomNumber(30, 50);
 
     for (let i = 0; i < numberOfPosts; i++) {
  
@@ -65,7 +65,7 @@ export class HomeComponent implements OnInit, AfterViewInit{
   }
   
   getRandomImageUrl(): string {
-    const keywords = ['nature', 'city', 'technology', 'food', 'animals'];
+    const keywords = ['nature', 'city', 'technology', 'food', 'animals','car','computer','drink'];
     const randomKeyword = keywords[Math.floor(Math.random() * keywords.length)];
     return `https://source.unsplash.com/800x600/?${randomKeyword}`;
   }
@@ -87,12 +87,14 @@ export class HomeComponent implements OnInit, AfterViewInit{
     const postContainer = this.el.nativeElement.querySelector('#randDirect');
     if (!postContainer) return;
 
-    const numberOfPosts = this.generateRandomNumber(3, 10);
+    const numberOfPosts = this.generateRandomNumber(0, 1);
 
     for (let i = 0; i < numberOfPosts; i++) {
 
       const postElement = this.renderer.createElement('div');
+      const RandName = this.getRandomSurname();
       postElement.innerHTML = `
+      
       <a routerLink="/messaggiDiretti">
       <div class="d-flex">
         <li><img style="width: 2rem;
@@ -100,11 +102,23 @@ export class HomeComponent implements OnInit, AfterViewInit{
         border-radius: 50%;
         margin-right: 1rem;
         margin-top: 0.5rem;" src="https://images.unsplash.com/photo-1706818033281-99b8289e0354?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></li>
-        <h4 class="mt-2">Nome Utente</h4>
+        <h4 class="mt-2">Kavidu</h4>
+      </div>
+    </a>
+
+      <a routerLink="/messaggiDiretti">
+      <div class="d-flex">
+        <li><img style="width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+        margin-top: 0.5rem;" src="https://images.unsplash.com/photo-1706818033281-99b8289e0354?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></li>
+        <h4 class="mt-2">${RandName}</h4>
       </div>
     </a>
       `
       postContainer.appendChild(postElement);
     }
   }
+
 }
