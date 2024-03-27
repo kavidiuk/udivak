@@ -1,6 +1,5 @@
 import { Component, OnInit, Renderer2, ElementRef, AfterViewInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -44,21 +43,21 @@ export class HomeComponent implements OnInit, AfterViewInit{
       const RandomText = this.getRandomText();
       postElement.innerHTML = `
       <div class="d-flex">
-      <img id="fotoProfilomini" class="mx-2" src="${randomImageUrl}" style='width: 2rem;
-      height: 2rem;
-      border-radius: 50%;
-      margin-right: 1rem;
-      margin-top: 0.5rem;' alt="fotoProfilo">
-      <h2 class="mb-0 mt-2">${randomName}</h2>
-    </div>
-    <hr class="mt-1 mb-0">
-    <img src="${randomImageUrl}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <i class="far fa-heart mx-2"></i>
-      <i class="far fa-comment mx-2"></i>
-      <i class="far fa-share-square mx-2"></i>
-      <p class="card-text">${RandomText}</p>
-    </div>
+        <img id="fotoProfilomini" class="mx-2" src="${randomImageUrl}" style='width: 2rem;
+          height: 2rem;
+          border-radius: 50%;
+          margin-right: 1rem;
+        margin-top: 0.5rem;' alt="fotoProfilo">
+        <h2 class="mb-0 mt-2">${randomName}</h2>
+      </div>
+      <hr class="mt-1 mb-0">
+     <img src="${randomImageUrl}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <i class="far fa-heart mx-2"></i>
+        <i class="far fa-comment mx-2"></i>
+       <i class="far fa-share-square mx-2"></i>
+        <p class="card-text">${RandomText}</p>
+      </div>
       `;
       postContainer.appendChild(postElement);
     }
@@ -87,38 +86,27 @@ export class HomeComponent implements OnInit, AfterViewInit{
     const postContainer = this.el.nativeElement.querySelector('#randDirect');
     if (!postContainer) return;
 
-    const numberOfPosts = this.generateRandomNumber(0, 1);
+     // const numberOfPosts = this.generateRandomNumber(1, 0);
 
-    for (let i = 0; i < numberOfPosts; i++) {
+     // for (let i = 0; i < numberOfPosts; i++) {
+     // for (let i = 1; i < 2; i++) {
 
       const postElement = this.renderer.createElement('div');
-      const RandName = this.getRandomSurname();
+     // const RandName = this.getRandomSurname();
       postElement.innerHTML = `
-      
       <a routerLink="/messaggiDiretti">
-      <div class="d-flex">
-        <li><img style="width: 2rem;
-        height: 2rem;
-        border-radius: 50%;
-        margin-right: 1rem;
-        margin-top: 0.5rem;" src="https://images.unsplash.com/photo-1706818033281-99b8289e0354?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></li>
+        <div class="d-flex">
+          <li><img style="width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            margin-right: 1rem;
+          margin-top: 0.5rem;" src="https://images.unsplash.com/photo-1706818033281-99b8289e0354?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></li>
         <h4 class="mt-2">Kavidu</h4>
-      </div>
-    </a>
-
-      <a routerLink="/messaggiDiretti">
-      <div class="d-flex">
-        <li><img style="width: 2rem;
-        height: 2rem;
-        border-radius: 50%;
-        margin-right: 1rem;
-        margin-top: 0.5rem;" src="https://images.unsplash.com/photo-1706818033281-99b8289e0354?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></li>
-        <h4 class="mt-2">${RandName}</h4>
-      </div>
-    </a>
-      `
+        </div>
+      </a>
+      `;
       postContainer.appendChild(postElement);
     }
   }
-
-}
+  //  }
+  //}
