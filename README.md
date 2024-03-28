@@ -1,27 +1,67 @@
-# Udivak
+# 🌐 Udivak
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
+Udiva è una piattaforma social che ti permette di creare il tuo account, chattare con i tuoi amici, pubblicare post e salire anche nella classifica degli account più seguiti. È progettato per offrire un'esperienza sociale coinvolgente, fornendo agli utenti una varietà di funzionalità per connettersi e condividere con gli altri.
 
-## Development server
+# Funzionalità principali
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Creazione dell'account: Registrati e crea il tuo account personalizzato su Udivak.
 
-## Code scaffolding
+- 💬 Chat: Chattare con i tuoi amici in tempo reale tramite messaggi istantanei.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- 📝 Pubblicazione di post: Condividi i tuoi pensieri, foto e video pubblicando post sulla tua bacheca.
 
-## Build
+- 🏆 Classifica degli account: Salire nella classifica degli account più seguiti in base all'interazione e all'attività degli utenti.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installazione 
+- back-end
+  
+1. Clona il repository:
+```bash
+git clone https://github.com/kavidiuk/udivak.Back-end
+```
+2. Entra nella directory del progetto:
+```bash
+cd udivak.Back-end
+```
+4. Installa le dipendenze:
+```bash
+npm install
+```
+5. Avvia il server:
+```bash
+npm start
+```
 
-## Running unit tests
+- front-end
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clona il repository:
+```bash
+git clone https://github.com/kavidiuk/udivak.git
+```
+2. Entra nella directory del progetto:
+```bash
+cd udivak
+```
+4. Installa le dipendenze:
+```bash
+npm install
+```
+5. Avvia il server:
+```bash
+npm start
+```
+6. Apri il browser e vai a http://localhost:4200 per accedere a Udivak il social più bello sempre.
 
-## Running end-to-end tests
+## Contribuire
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Se desideri contribuire a Udivak, sei il benvenuto! Segui questi passaggi:
 
-## Further help
+1. Fai il fork del repository.
+2. Crea un nuovo branch (`git checkout -b miglioramenti`).
+3. Fai il commit delle tue modifiche (`git commit -am 'Aggiungi nuove funzionalità'`).
+4. Pusha il tuo branch (`git push origin miglioramenti`).
+5. Invia una pull request.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Contatti
+
+Per ulteriori informazioni o domande, contatta kaviduwarnakulasuriya@gmailcom
