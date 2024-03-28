@@ -1,6 +1,6 @@
 # 🌐 Udivak
 
-Udiva è una piattaforma social che ti permette di creare il tuo account, chattare con i tuoi amici, pubblicare post e salire anche nella classifica degli account più seguiti. È progettato per offrire un'esperienza sociale coinvolgente, fornendo agli utenti una varietà di funzionalità per connettersi e condividere con gli altri.
+Udivak è una piattaforma social che ti permette di creare il tuo account, chattare con i tuoi amici, pubblicare post e salire anche nella classifica degli account più seguiti. È progettato per offrire un'esperienza sociale coinvolgente, fornendo agli utenti una varietà di funzionalità per connettersi e condividere con gli altri.
 
 # Funzionalità principali
 
