@@ -98,8 +98,9 @@ export class CercaComponent implements OnInit {
     const RandomText = this.getRandomText();
     const postElement = document.createElement('div');
     postElement.innerHTML = `
+    <div class="card mt-3 m-auto col-auto" style="width: 18rem;">
     <div class="d-flex">
-        <img id="fotoProfilomini" class="mx-2" src="${randomImageProfile}" style="width: 2rem;
+        <img id="" class="mx-2" src="${randomImageProfile}" style="width: 2rem;
         height: 2rem;
         border-radius: 50%;
         margin-right: 1rem;
@@ -114,11 +115,14 @@ export class CercaComponent implements OnInit {
        <i class="far fa-share-square mx-2"></i>
         <p class="card-text">${RandomText}</p>
       </div>
+      </div>
     `;
     const postContainer = document.getElementById('utenteCercato');
     if (postContainer) {
         postContainer.appendChild(postElement);
     }
+    const nomeCercatoInput = <HTMLInputElement>document.getElementById('testo');
+    if (nomeCercatoInput){nomeCercatoInput.value = ''}
   }
 }
 }
