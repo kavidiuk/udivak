@@ -6,17 +6,16 @@ import { HomeComponent } from '../home/home.component';
   standalone: true,
   imports: [],
   templateUrl: './messaggi-diretti.component.html',
-  styleUrl: './messaggi-diretti.component.scss'
+  styleUrl: './messaggi-diretti.component.scss',
 })
-export class MessaggiDirettiComponent implements OnInit{
-
-  constructor(private location: Location){}
-  goBack(){
+export class MessaggiDirettiComponent implements OnInit {
+  constructor(private location: Location) {}
+  goBack() {
     this.location.back();
   }
 
-  ngOnInit(): void { 
-   // const randomSruname = this.homeComponent.getRandomSurname();
+  ngOnInit(): void {
+    // const randomSruname = this.homeComponent.getRandomSurname();
     // return `randomSruname`;
   }
   addPost(event: Event): void {
@@ -31,7 +30,7 @@ export class MessaggiDirettiComponent implements OnInit{
     `;
     const postContainer = document.getElementById('postContainer');
     if (postContainer) {
-        postContainer.appendChild(postElement);
+      postContainer.appendChild(postElement);
     }
   }
 }

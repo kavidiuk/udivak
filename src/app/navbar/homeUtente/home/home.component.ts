@@ -1,14 +1,20 @@
-import { Component, OnInit, Renderer2, ElementRef, AfterViewInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Renderer2,
+  ElementRef,
+  AfterViewInit,
+} from '@angular/core';
 import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [RouterModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
-export class HomeComponent implements OnInit, AfterViewInit{
-  constructor(private renderer: Renderer2, private el: ElementRef) { }
+export class HomeComponent implements OnInit, AfterViewInit {
+  constructor(private renderer: Renderer2, private el: ElementRef) {}
 
   ngOnInit(): void {
     this.addRandomPosts();
@@ -22,14 +28,12 @@ export class HomeComponent implements OnInit, AfterViewInit{
   }
 
   addRandomPosts(): void {
-
     const postContainer = this.el.nativeElement.querySelector('#postContainer');
     if (!postContainer) return;
 
     const numberOfPosts = this.generateRandomNumber(30, 50);
 
     for (let i = 0; i < numberOfPosts; i++) {
- 
       const postElement = this.renderer.createElement('div');
       this.renderer.addClass(postElement, 'spazio');
       this.renderer.addClass(postElement, 'card');
@@ -62,38 +66,68 @@ export class HomeComponent implements OnInit, AfterViewInit{
       postContainer.appendChild(postElement);
     }
   }
-  
+
   getRandomImageUrl(): string {
-    const keywords = ['nature', 'city', 'technology', 'food', 'animals','car','computer','drink'];
+    const keywords = [
+      'nature',
+      'city',
+      'technology',
+      'food',
+      'animals',
+      'car',
+      'computer',
+      'drink',
+    ];
     const randomKeyword = keywords[Math.floor(Math.random() * keywords.length)];
     return `https://source.unsplash.com/800x600/?${randomKeyword}`;
   }
-  
+
   getRandomText(): String {
-    const text = ['Sei una fonte continua di ispirazione. Continua così! 💪','Che bellissimi ricordi! Grazie per averli condivisi con noi! 🌈','Questa immagine mi ha emozionato. Grazie per condividerla! ❤️','Mi hai fatto venire voglia di viaggiare! Dove è questo paradiso? ✈️','Semplicemente stupendo! Non smettere mai di condividere la tua arte! 📸','Quanta creatività in questa foto! Mi ispira tantissimo! 🎨','Adoro il tuo stile! Sempre alla moda! 💃', 'Non riesco a credere quanto sia bello questo posto! 🌟', 'Wow, questa foto è davvero mozzafiato! 😍', 'Wow, questa foto è davvero mozzafiato! 😍']
-    const randomText = text[Math.floor(Math.random()*text.length)];
+    const text = [
+      'Sei una fonte continua di ispirazione. Continua così! 💪',
+      'Che bellissimi ricordi! Grazie per averli condivisi con noi! 🌈',
+      'Questa immagine mi ha emozionato. Grazie per condividerla! ❤️',
+      'Mi hai fatto venire voglia di viaggiare! Dove è questo paradiso? ✈️',
+      'Semplicemente stupendo! Non smettere mai di condividere la tua arte! 📸',
+      'Quanta creatività in questa foto! Mi ispira tantissimo! 🎨',
+      'Adoro il tuo stile! Sempre alla moda! 💃',
+      'Non riesco a credere quanto sia bello questo posto! 🌟',
+      'Wow, questa foto è davvero mozzafiato! 😍',
+      'Wow, questa foto è davvero mozzafiato! 😍',
+    ];
+    const randomText = text[Math.floor(Math.random() * text.length)];
     return `${randomText}`;
   }
-  
+
   getRandomSurname(): String {
-    const text = ['Francesco', 'Denis', 'Samy', 'Andrea','Clenildo','Artur','Ilias','Harshpreet','Cristian','Moumine']
-    const randomText = text[Math.floor(Math.random()*text.length)];
+    const text = [
+      'Francesco',
+      'Denis',
+      'Samy',
+      'Andrea',
+      'Clenildo',
+      'Artur',
+      'Ilias',
+      'Harshpreet',
+      'Cristian',
+      'Moumine',
+    ];
+    const randomText = text[Math.floor(Math.random() * text.length)];
     return `${randomText}`;
   }
 
   addRandomDirect(): void {
-
     const postContainer = this.el.nativeElement.querySelector('#randDirect');
     if (!postContainer) return;
 
-     // const numberOfPosts = this.generateRandomNumber(1, 0);
+    // const numberOfPosts = this.generateRandomNumber(1, 0);
 
-     // for (let i = 0; i < numberOfPosts; i++) {
-     // for (let i = 1; i < 2; i++) {
+    // for (let i = 0; i < numberOfPosts; i++) {
+    // for (let i = 1; i < 2; i++) {
 
-      const postElement = this.renderer.createElement('div');
-     // const RandName = this.getRandomSurname();
-      postElement.innerHTML = `
+    const postElement = this.renderer.createElement('div');
+    // const RandName = this.getRandomSurname();
+    postElement.innerHTML = `
       <a routerLink="/messaggiDiretti">
         <div class="d-flex">
           <li><img style="width: 2rem;
@@ -105,8 +139,8 @@ export class HomeComponent implements OnInit, AfterViewInit{
         </div>
       </a>
       `;
-      postContainer.appendChild(postElement);
-    }
+    postContainer.appendChild(postElement);
   }
-  //  }
-  //}
+}
+//  }
+//}

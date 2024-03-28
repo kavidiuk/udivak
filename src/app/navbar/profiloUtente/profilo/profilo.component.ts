@@ -8,8 +8,7 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./profilo.component.scss'],
 })
 export class ProfiloComponent implements OnInit {
-
-  constructor(private renderer: Renderer2, private el: ElementRef) { }
+  constructor(private renderer: Renderer2, private el: ElementRef) {}
 
   ngOnInit(): void {
     this.addRandomPosts();
@@ -46,14 +45,19 @@ export class ProfiloComponent implements OnInit {
   }
 
   getRandomText(): String {
-    const text = ['ciao a tutti seguitemi nel mio profilo', 'hello followers', 'hola chicos', 'Seguitemi per ulteriori informazioni']
-    const randomText = text[Math.floor(Math.random()*text.length)];
+    const text = [
+      'ciao a tutti seguitemi nel mio profilo',
+      'hello followers',
+      'hola chicos',
+      'Seguitemi per ulteriori informazioni',
+    ];
+    const randomText = text[Math.floor(Math.random() * text.length)];
     return `${randomText}`;
   }
 
   getRandomSurname(): String {
-    const text = ['Calciatore', 'Cantante', 'informatico', 'Barista']
-    const randomText = text[Math.floor(Math.random()*text.length)];
+    const text = ['Calciatore', 'Cantante', 'informatico', 'Barista'];
+    const randomText = text[Math.floor(Math.random() * text.length)];
     return `${randomText}`;
   }
 }

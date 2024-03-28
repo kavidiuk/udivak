@@ -6,19 +6,19 @@ import { RouterModule } from '@angular/router';
   imports: [RouterModule],
   selector: 'app-carica-foto',
   templateUrl: './carica-foto.component.html',
-  styleUrls: ['./carica-foto.component.scss']
+  styleUrls: ['./carica-foto.component.scss'],
 })
 export class CaricaFotoComponent {
-  
-  constructor( ) {}
-  
+  constructor() {}
+
   addPost(event: Event): void {
     event.preventDefault();
 
     const title = (<HTMLInputElement>document.getElementById('title'))?.value;
-    const content = (<HTMLInputElement>document.getElementById('content'))?.value;
+    const content = (<HTMLInputElement>document.getElementById('content'))
+      ?.value;
     const url = (<HTMLInputElement>document.getElementById('urls'))?.value;
-   
+
     const postElement = document.createElement('div');
     postElement.className = 'card mt-3';
     postElement.innerHTML = `
