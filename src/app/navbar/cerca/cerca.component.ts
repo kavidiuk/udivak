@@ -5,10 +5,9 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule],
   templateUrl: './cerca.component.html',
-  styleUrl: './cerca.component.scss'
+  styleUrls: ['./cerca.component.scss']
 })
 export class CercaComponent implements OnInit {
-  
   constructor(private renderer: Renderer2, private el: ElementRef){}
   
   ngOnInit(): void {
@@ -73,4 +72,53 @@ export class CercaComponent implements OnInit {
     const randomText = text[Math.floor(Math.random()*text.length)];
     return `${randomText}`;
   }
+  // cerca
+  // cerca(event:Event): void{
+  //   // switch 
+  //   event.preventDefault();
+  //   this.mostraCard = false;
+  //   const cercato = (<HTMLInputElement>document.getElementById('cercato'))?.value;
+  //   const postElement = document.createElement('div');
+  //   postElement.className = '';
+  //   postElement.innerHTML = `
+  //   <h1>Ciao funziona</h1>
+  //   `;
+  //   // const postContainer = document.getElementById('cercato');
+  //   const postContainer = this.el.nativeElement.querySelector('#cercato');
+  //   if(postContainer){
+  //     postContainer.appendChild(postElement);
+  //   }
+  // }
+  addPost(event: Event): void {
+    const randomImageProfile = this.getRandomImageUrl();
+    for(let i = 0; i < this.generateRandomNumber(10,30) ; i++ ){
+    event.preventDefault();
+    const nomeCercato = (<HTMLInputElement>document.getElementById('testo'))?.value;
+    const randomImageUrl = this.getRandomImageUrl();
+    const RandomText = this.getRandomText();
+    const postElement = document.createElement('div');
+    postElement.innerHTML = `
+    <div class="d-flex">
+        <img id="fotoProfilomini" class="mx-2" src="${randomImageProfile}" style="width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+        margin-top: 0.5rem;";
+        <h2 class="mb-0 mt-3">${nomeCercato}</h2>
+      </div>
+      <hr class="mt-1 mb-0">
+     <img src="${randomImageUrl}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <i class="far fa-heart mx-2"></i>
+        <i class="far fa-comment mx-2"></i>
+       <i class="far fa-share-square mx-2"></i>
+        <p class="card-text">${RandomText}</p>
+      </div>
+    `;
+    const postContainer = document.getElementById('utenteCercato');
+    if (postContainer) {
+        postContainer.appendChild(postElement);
+    }
+  }
+}
 }
